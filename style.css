@@ -1,1 +1,122 @@
 
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #0b0f19;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 60px;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* 1. ANIMATED TEXT - Ein dynamischer Einblende- & Bewegungseffekt */
+h1:nth-of-type(1) {
+  color: #3b82f6;
+  animation: pulse-tracking 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-tracking {
+  0% {
+    letter-spacing: -2px;
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  100% {
+    letter-spacing: 8px;
+    opacity: 1;
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+}
+
+/* 2. SHINY DAY - Ein goldener, wandernder Metallic-Glanz (Shimmer) */
+h1:nth-of-type(2) {
+  background: linear-gradient(
+    to right,
+    #f59e0b 20%,
+    #fef08a 40%,
+    #fef08a 60%,
+    #f59e0b 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine-effect 4s linear infinite;
+}
+
+@keyframes shine-effect {
+  to {
+    background-position: 200% center;
+  }
+}
+
+h1:nth-of-type(3) {
+  color: #fff;
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 
+      0 0 4px #fff,
+      0 0 10px #8b5cf6,
+      0 0 20px #8b5cf6,
+      0 0 40px #d946ef;
+  }
+  to {
+    text-shadow: 
+      0 0 8px #fff,
+      0 0 20px #a78bfa,
+      0 0 30px #a78bfa,
+      0 0 60px #e879f9,
+      0 0 80px #e879f9;
+  }
+}
+
+/* 4. NOT A DESIGNER - */
+h1:nth-of-type(4) {
+  position: relative;
+  color: #10b981;
+  text-shadow: 0.05em 0 0 rgba(239, 68, 68, 0.75),
+              -0.025em -0.05em 0 rgba(59, 130, 246, 0.75);
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(239, 68, 68, 0.75), -0.05em -0.025em 0 rgba(59, 130, 246, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(239, 68, 68, 0.75), -0.05em -0.025em 0 rgba(59, 130, 246, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(239, 68, 68, 0.75), 0.025em 0.025em 0 rgba(59, 130, 246, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(239, 68, 68, 0.75), 0.025em 0.025em 0 rgba(59, 130, 246, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(239, 68, 68, 0.75), 0.05em 0 0 rgba(59, 130, 246, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(239, 68, 68, 0.75), 0.05em 0 0 rgba(59, 130, 246, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(239, 68, 68, 0.75), -0.025em -0.025em 0 rgba(59, 130, 246, 0.75);
+  }
+  }
+    
